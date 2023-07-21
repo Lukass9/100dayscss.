@@ -38,14 +38,15 @@
 }
 .sun{
   position: absolute;
-  top: 65px;
-  left: -10px;
+  top: 75px;
+  left: -25px;
   width: 34px;
   height: 34px;
   border-radius: 100%;
   background-color: #FFEF00;
-  transform-origin: 120% 100%;
-  transform: rotate(15deg)
+  transform-origin: 115px 40px;
+  transform: rotate(-5deg);
+  animation: sun-goes-down 4s ease-in-out infinite;
 }
 .left-side{
   position: absolute;
@@ -53,17 +54,19 @@
   left: 20%;
   border-left: 50px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 55px solid lightgray;
+  border-bottom: 55px solid rgb(219, 219, 219);
   width:0;
+  animation: left-side-color 4s ease-in-out infinite;
 }
 .right-side{
   position: absolute;
   top: 34.5%;
-  left: 43%;
+  left: 42.4%;
   border-left: 10px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 55px solid gray;
+  border-bottom: 55px solid rgb(219, 219, 219);
   width:0;
+  animation: right-side-color 4s ease-in-out infinite;
 }
 .shadow{
   position: absolute;
@@ -71,8 +74,9 @@
   right: -10px;
   width: 231px;
   height: 60px;
-  clip-path: polygon(77% 0, 34% 0, 90% 25%);
-  background: rgba(0,0,0,0.2);;
+  clip-path: polygon(76.7% 0, 34% 0, 250% 55%);
+  background: rgba(0,0,0,0.2);
+  animation: shadow-move 4s ease-in-out infinite;
 }
 .ground{
   width: 100%;
@@ -80,4 +84,50 @@
   background: #F0DE75;;
 }
 
+@keyframes sun-goes-down{
+  0%{
+    transform: rotate(-5deg);
+  }
+  30%{
+    transform: rotate(45deg);
+  }
+  100%{
+    transform: rotate(160deg);
+  }
+}
+
+@keyframes shadow-move{
+  0%{
+    clip-path: polygon(76.7% 0, 34% 0, 250% 55%);
+  }
+  30%{
+    clip-path: polygon(76.7% 0, 34% 0, 125% 85%);
+  }
+  100%{
+    clip-path: polygon(76.7% 0, 34% 0, 0% 10%);
+  }
+}
+
+@keyframes left-side-color{
+  0%{
+    filter: brightness(60%);
+  }
+  30%{
+    filter: brightness(95%);
+  }
+  100%{
+    filter: brightness(60%);
+  }
+}
+@keyframes right-side-color{
+  0%{
+    filter: brightness(40%);
+  }
+  30%{
+    filter: brightness(85%);
+  }
+  100%{
+    filter: brightness(95%);
+  }
+}
 /*# sourceMappingURL=style.css.map */
