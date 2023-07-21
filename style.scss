@@ -39,42 +39,65 @@
     border-radius: 2px;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
   }
-}
-// .active{
-//   .line-1{
-//     animation: animate-line-1 .8s ease forwards;
-//   }
-//   .line-2{
-//     animation: animate-line-2 .8s ease forwards;
-//   }
-//   .line-3{
-//     animation: animate-line-3 .8s ease forwards;
-//   }
-// }
-.close{
   .line-1{
-    animation: animate-line-1 .8s ease forwards backwards ;
+    animation: animate-line-1-rev .8s ease;
   }
   .line-2{
-    animation: animate-line-2 .8s ease forwards backwards ;
+    animation: animate-line-2-rev .8s ease;
   }
   .line-3{
-    animation: animate-line-3 .8s ease forwards backwards ;
+    animation: animate-line-3-rev .8s ease;
+  }
+}
+.active{
+  .line-1{
+    animation: animate-line-1 .8s ease forwards;
+  }
+  .line-2{
+    animation: animate-line-2 .8s ease forwards;
+  }
+  .line-3{
+    animation: animate-line-3 .8s ease forwards;
   }
 }
 
+.no-animate{
+  animation: none !important;
+}
 
 @keyframes animate-line-1
 {
+  0%{transform:translateY(0);}
   40%{transform:translateY(17px);}
   100%{transform:translateY(17px) rotate(45deg);}
 }
 @keyframes animate-line-2
 {
+  0%{transform:scale(1);}
   100%{transform: scale(0);}
 }
 @keyframes animate-line-3
 {
+  0%{transform:translateY(0);}
   40%{transform:translateY(-17px);}
   100%{transform:translateY(-17px) rotate(135deg);}
+}
+
+
+@keyframes animate-line-1-rev
+{
+  0%{transform:translateY(17px) rotate(45deg);}
+  40%{transform:translateY(17px);}
+  100%{transform:translateY(0);}
+}
+@keyframes animate-line-2-rev
+{
+  0%{transform:scale(0);}
+  100%{transform: scale(1);}
+}
+@keyframes animate-line-3-rev
+{
+  0%{transform:translateY(-17px) rotate(135deg);}
+  40%{transform:translateY(-17px);}
+  100%{transform:translateY(0);}
 }
