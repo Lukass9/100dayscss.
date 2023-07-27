@@ -40,15 +40,60 @@
   color: white;
 }
 .menu {
-  width: 30px;
-  height: 30px;
-  background-color: #b2daff;
+  position: relative;
+  cursor: pointer;
 }
+.menu:hover .line, .menu:hover .circle{
+  background-color: white;
+}
+.menu .line{
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  margin: 6px;
+  background-color: #b2daff;
+  transition: background-color .3s ease-in-out;
+}
+.menu .circle{
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #b2daff;
+  box-shadow: 0 0px 0 2px #5f98cd;
+  transition: background-color .3s ease-in-out;
+}
+
 .search-icon {
-  width: 30px;
-  height: 30px;
-  background-color: #b2daff;
+  color: #b2daff;
+  transition: color .3s ease-in-out;
 }
+.search-icon:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-inp{
+  position: absolute;
+  padding: 9px;
+  border-radius: 20px;
+  width: 70%;
+  left: 10px;
+  border: 1px solid lightgray;
+  outline: none;
+  opacity: 0;
+  visibility: hidden;
+  animation: serch-animation-left .6s ease-in-out ;
+}
+.visible{
+  opacity: 1;
+  visibility: visible;
+  animation: serch-animation .6s ease-in-out ;
+}
+
+
 .note {
   position: relative;
   color: #666;
@@ -89,7 +134,29 @@
   overflow-y: auto;
 }
 
-.notifications:hover {
-  color: red;
+.note:hover {
+  color: #5F98CD;
   cursor: pointer;
+}
+
+@keyframes serch-animation{
+  from{
+    opacity: 0;
+    left: 50px;
+  }
+  to{
+    opacity: 1;
+    left: 10px;
+  }
+}
+
+@keyframes serch-animation-left{
+  from{
+    opacity: 1;
+    left: 10px;
+  }
+  to{
+    opacity: 0;
+    left: 50px;
+  }
 }

@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="frame">
-      <div class="center">
-        <div class="panel">
-          <header class="header">
-            <div class="menu"></div>
-            <h2 class="title">Notifications</h2>
-            <div class="fa fa-search search-icon"></div>
-          </header>
-          <main class="notifications">
-            <div class="note-wrapp">
-              <div class="note">
-                <div class="time">9:24 AM</div>
-                <span class="name">John Walker </span>
-                <span class="data">posted a photo on your wall.</span>
-              </div>
-              <div class="note">
-                <div class="time">8:19 AM</div>
-                <span class="name">Alice Parker </span>
-                <span class="data">commented your last post.</span>
-              </div>
-              <div class="note">
-                <div class="time">Yesterday</div>
-                <span class="name">Luke Wayne </span>
-                <span class="data">added you as friend.</span>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://use.fontawesome.com/fba8d4ba30.js"></script>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="center">
+      <div class="panel">
+        <header class="header">
+          <div class="menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="circle"></div>
+          </div>
+          <h2 class="title">Notifications</h2>
+          <div class="fa fa-search search-icon"></div>
+          <input class="search-inp" type="text" name="search" id="search" placeholder="Search...">
+        </header>
+        <main class="notifications">
+          <div class="note-wrapp">
+            <div class="note">
+              <div class="time">9:24 AM</div>
+              <span class="name">John Walker </span>
+              <span class="data">posted a photo on your wall.</span>
             </div>
-          </main>
-        </div>
+            <div class="note">
+              <div class="time">8:19 AM</div>
+              <span class="name">Alice Parker </span>
+              <span class="data">commented your last post.</span>
+            </div>
+            <div class="note">
+              <div class="time">Yesterday</div>
+              <span class="name">Luke Wayne </span>
+              <span class="data">added you as friend.</span>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
-    <script type="module" src="index.js"></script>
-  </body>
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
+
 </html>
