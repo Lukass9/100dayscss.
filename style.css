@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans:600,400";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
 .frame {
   position: absolute;
   top: 50%;
@@ -10,7 +10,7 @@
   border-radius: 2px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: #42a7a1;
+  background: #264057;
   color: #333;
   font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -21,4 +21,75 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.panel {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: #5f98cd;
+}
+.title {
+  font-size: 15px;
+  color: white;
+}
+.menu {
+  width: 30px;
+  height: 30px;
+  background-color: #b2daff;
+}
+.search-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #b2daff;
+}
+.note {
+  position: relative;
+  color: #666;
+  font-size: 15px;
+  margin: 20px 30px 20px 35px;
+}
+.note::before {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: -18px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  border: 2px solid #5f98cd;
+  background-color: white;
+  box-shadow: 0 0 0 2px #fff;
+}
+.time {
+  font-size: 11px;
+}
+.name {
+  font-weight: bold;
+}
+.notifications {
+  position: relative;
+  height: 240px;
+}
+.notifications::before {
+  position: absolute;
+  height: 100%;
+  left: 20px;
+  content: " ";
+  border-left: 3px solid #ebebeb;
+}
+.note-wrapp {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.notifications:hover {
+  color: red;
+  cursor: pointer;
 }
